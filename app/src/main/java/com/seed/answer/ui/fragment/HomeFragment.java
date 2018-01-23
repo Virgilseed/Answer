@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.baidu.speech.EventManager;
 import com.seed.answer.R;
 import com.seed.answer.ui.BaseFragment;
 
@@ -26,10 +27,17 @@ public class HomeFragment extends BaseFragment {
     @Bind(R.id.swipe_refresh_layout)
     SwipeRefreshLayout mSwipeRefreshLayout;
 
+    private EventManager mEventManager;
+
+    public static HomeFragment newInstance() {
+        HomeFragment baseFragment = new HomeFragment();
+        return baseFragment;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View inflate = View.inflate(getContext(), R.layout.fragment_home, null);
+        View inflate = View.inflate(getContext(), R.layout.app_bar_main, null);
         ButterKnife.bind(this, inflate);
         return inflate;
     }
