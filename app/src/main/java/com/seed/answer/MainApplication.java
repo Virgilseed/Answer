@@ -17,6 +17,6 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Bugly.init(getApplicationContext(), "a77bf8f5e9", false);
+        Bugly.init(getApplicationContext(), "a77bf8f5e9", true);
     }
 }
